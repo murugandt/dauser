@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Slide" customModule="DTCab" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="QDx-f0-rb9" userLabel="ImageView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" red="0.99543911220000003" green="0.52607929710000001" blue="0.51370334630000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome1" translatesAutoresizingMaskIntoConstraints="NO" id="Pfo-hl-7Vv">
+                    <rect key="frame" x="0.0" y="446" width="414" height="450"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="450" id="Oae-MS-uef"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request a Ride" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h55-Zm-Y1r">
+                    <rect key="frame" x="30" y="50" width="354" height="34.5"/>
+                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request a Ride" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wi9-2W-U0h">
+                    <rect key="frame" x="30" y="92.5" width="354" height="22"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.99543911220000003" green="0.52607929710000001" blue="0.51370334630000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Pfo-hl-7Vv" secondAttribute="bottom" id="0Dk-fK-ZQn"/>
+                <constraint firstItem="h55-Zm-Y1r" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="7L4-e1-FTy"/>
+                <constraint firstAttribute="bottom" secondItem="QDx-f0-rb9" secondAttribute="bottom" id="7Yk-02-ki6"/>
+                <constraint firstItem="Pfo-hl-7Vv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HVP-yA-dFF"/>
+                <constraint firstItem="h55-Zm-Y1r" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="TLw-6t-ZRp"/>
+                <constraint firstItem="QDx-f0-rb9" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="URt-QO-Qzs"/>
+                <constraint firstItem="Wi9-2W-U0h" firstAttribute="trailing" secondItem="h55-Zm-Y1r" secondAttribute="trailing" id="WK9-AW-SWd"/>
+                <constraint firstItem="QDx-f0-rb9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ada-05-g81"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Pfo-hl-7Vv" secondAttribute="trailing" id="bwT-bV-Kzi"/>
+                <constraint firstItem="Wi9-2W-U0h" firstAttribute="top" secondItem="h55-Zm-Y1r" secondAttribute="bottom" constant="8" id="cAy-LD-itj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="h55-Zm-Y1r" secondAttribute="trailing" constant="30" id="dGn-hj-nrQ"/>
+                <constraint firstItem="QDx-f0-rb9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="f0y-QP-gkT"/>
+                <constraint firstItem="QDx-f0-rb9" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="pRl-gZ-wT4"/>
+                <constraint firstItem="Wi9-2W-U0h" firstAttribute="leading" secondItem="h55-Zm-Y1r" secondAttribute="leading" id="y8b-0x-fIY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="descLabel" destination="Wi9-2W-U0h" id="8od-9V-U8f"/>
+                <outlet property="imageView" destination="QDx-f0-rb9" id="byA-km-a96"/>
+                <outlet property="imgContent" destination="Pfo-hl-7Vv" id="4c0-Jp-sso"/>
+                <outlet property="imgContentHeight" destination="Oae-MS-uef" id="0JQ-oZ-ZGP"/>
+                <outlet property="titleLabel" destination="h55-Zm-Y1r" id="iBM-89-EE7"/>
+            </connections>
+            <point key="canvasLocation" x="136.80000000000001" y="150.67466266866569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Rectangle" width="375" height="812"/>
+        <image name="welcome1" width="1125" height="1418"/>
+    </resources>
+</document>

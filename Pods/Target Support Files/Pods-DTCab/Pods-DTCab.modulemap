@@ -1,0 +1,6 @@
+framework module Pods_DTCab {
+  umbrella header "Pods-DTCab-umbrella.h"
+
+  export *
+  module * { export * }
+}

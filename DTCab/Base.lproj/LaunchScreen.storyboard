@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="039-NP-cth">
+                                <rect key="frame" x="137" y="124" width="140" height="140"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logobg" translatesAutoresizingMaskIntoConstraints="NO" id="oSl-GQ-9LY">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="iOs-5K-q3v">
+                                        <rect key="frame" x="10" y="10" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="aHQ-2s-qJB"/>
+                                            <constraint firstAttribute="height" constant="120" id="uBP-UC-RTT"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="oSl-GQ-9LY" secondAttribute="trailing" id="CzI-xv-lJm"/>
+                                    <constraint firstAttribute="width" constant="140" id="NTg-NX-5Tb"/>
+                                    <constraint firstAttribute="bottom" secondItem="oSl-GQ-9LY" secondAttribute="bottom" id="SkW-UN-peY"/>
+                                    <constraint firstItem="oSl-GQ-9LY" firstAttribute="top" secondItem="039-NP-cth" secondAttribute="top" id="gQS-fu-ta0"/>
+                                    <constraint firstItem="iOs-5K-q3v" firstAttribute="centerY" secondItem="039-NP-cth" secondAttribute="centerY" id="i0n-De-WvG"/>
+                                    <constraint firstAttribute="height" constant="140" id="vYR-1q-elQ"/>
+                                    <constraint firstItem="iOs-5K-q3v" firstAttribute="centerX" secondItem="039-NP-cth" secondAttribute="centerX" id="voE-Df-FHS"/>
+                                    <constraint firstItem="oSl-GQ-9LY" firstAttribute="leading" secondItem="039-NP-cth" secondAttribute="leading" id="yeF-1g-ztM"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="artboard" translatesAutoresizingMaskIntoConstraints="NO" id="FDb-eT-D9f">
+                                <rect key="frame" x="0.0" y="496" width="414" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="AVE-IN-Vvu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dlight Tech" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydf-Np-LGo">
+                                <rect key="frame" x="74" y="289" width="266.5" height="55"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.99564784770000003" green="0.56530445809999996" blue="0.54899960759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="FDb-eT-D9f" secondAttribute="bottom" id="4pG-Fm-ojz"/>
+                            <constraint firstItem="039-NP-cth" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="7wA-fo-egs"/>
+                            <constraint firstItem="FDb-eT-D9f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Wlh-vp-HCN"/>
+                            <constraint firstItem="039-NP-cth" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="b3B-o9-szR"/>
+                            <constraint firstItem="FDb-eT-D9f" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bU1-da-jex"/>
+                            <constraint firstItem="Ydf-Np-LGo" firstAttribute="top" secondItem="039-NP-cth" secondAttribute="bottom" constant="25" id="hnS-rk-jab"/>
+                            <constraint firstItem="Ydf-Np-LGo" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mSO-rL-YEC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="artboard" width="375" height="472.5"/>
+        <image name="logo" width="118" height="118"/>
+        <image name="logobg" width="118" height="118"/>
+    </resources>
+</document>
