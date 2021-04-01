@@ -15,6 +15,7 @@ extension AppDelegate{
     }
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
         UserDefaults.standard.setValue(fcmToken, forKey: "fcmToken")
+        print(fcmToken)
     }
     func application(_ application: UIApplication,
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
