@@ -12,7 +12,7 @@ import IQKeyboardManagerSwift
 import GooglePlaces
 import GoogleMaps
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUserNotificationCenterDelegate {
     var window: UIWindow?
 
