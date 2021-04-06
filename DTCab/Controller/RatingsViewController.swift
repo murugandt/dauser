@@ -12,40 +12,41 @@ class RatingsViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var customView: UIView!
     
-    var bottomView = RatingsView()
+    var ratingsView = RatingsView()
     var currentRatingVal = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        bottomView.translatesAutoresizingMaskIntoConstraints = false
-        self.customView.addSubview(bottomView)
-//
-//        NSLayoutConstraint.activate([
-//            bottomView.bottomAnchor.constraint(equalTo: customView.bottomAnchor),
-//            bottomView.leadingAnchor.constraint(equalTo: customView.leadingAnchor),
-//            bottomView.trailingAnchor.constraint(equalTo: customView.trailingAnchor),
-//            bottomView.topAnchor.constraint(equalTo: customView.topAnchor),
-//        ])
-//
-//        self.customView.layer.cornerRadius = 20.0
-//        self.customView.layer.masksToBounds = true
-//
-//        //bottomView.commentsView.delegate = self
-//
-////        bottomView.commentsView.text = "Additional comments"
-////        bottomView.commentsView.textColor = UIColor.lightGray
-//
-////        bottomView.commentsView.layer.borderWidth = 1.0
-////        bottomView.commentsView.layer.borderColor = UIColor.lightGray.cgColor
-////        bottomView.commentsView.layer.cornerRadius = 5.0
-////        bottomView.commentsView.layer.masksToBounds = true
-//
-//        bottomView.ratingView.didTouchCosmos = didTouchCosmos
-//        bottomView.ratingView.didFinishTouchingCosmos = didFinishTouchingCosmos
-//        updateRating(requiredRating: nil)
+        ratingsView.translatesAutoresizingMaskIntoConstraints = false
+        self.customView.addSubview(ratingsView)
+        
+        NSLayoutConstraint.activate([
+            ratingsView.bottomAnchor.constraint(equalTo: customView.bottomAnchor),
+            ratingsView.leadingAnchor.constraint(equalTo: customView.leadingAnchor),
+            ratingsView.trailingAnchor.constraint(equalTo: customView.trailingAnchor),
+            ratingsView.topAnchor.constraint(equalTo: customView.topAnchor),
+        ])
+        
+        self.customView.layer.cornerRadius = 20.0
+        self.customView.layer.masksToBounds = true
+        
+        ratingsView.commentsView.delegate = self
+
+        ratingsView.commentsView.text = "Additional comments"
+        ratingsView.commentsView.textColor = UIColor.lightGray
+
+        ratingsView.commentsView.layer.borderWidth = 0.5
+        ratingsView.commentsView.layer.borderColor = UIColor.lightGray.cgColor
+        ratingsView.commentsView.layer.cornerRadius = 5.0
+        ratingsView.commentsView.layer.masksToBounds = true
+    
+        ratingsView.ratingView.didTouchCosmos = didTouchCosmos
+        ratingsView.ratingView.didFinishTouchingCosmos = didFinishTouchingCosmos
+        updateRating(requiredRating: nil)
         
     }
+    
     
     private func didTouchCosmos(_ rating: Double) {
         
@@ -62,7 +63,7 @@ class RatingsViewController: UIViewController, UITextViewDelegate {
         
         if let nonEmptyRequiredRating = requiredRating {
             newRatingValue = nonEmptyRequiredRating
-            bottomView.ratingView.rating = newRatingValue
+            ratingsView.ratingView.rating = newRatingValue
         } else {
             
         }
@@ -91,8 +92,7 @@ class RatingsViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func closeBtn(_ sender: Any) {
-   
+        
     }
-
 }
 
