@@ -15,7 +15,7 @@ import GoogleMaps
 import FirebaseCrashlytics
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
     
     func firbaseConfiguration(){
         FirebaseApp.configure()
-        Messaging.messaging().delegate = self
+        //Messaging.messaging().delegate = self
         GMSServices.provideAPIKey(googleAddressApiKey)
         GMSPlacesClient.provideAPIKey(googleAddressApiKey)
     }
