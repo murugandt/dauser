@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SwiftMessages
+//import SwiftMessages
 
 extension UIViewController{
     
@@ -35,35 +35,35 @@ extension UIViewController{
     }
 }
 
-extension UIViewController{
-    func popUpshow(title: String, subTitle: String, theme: String) {
-        let view: MessageView
-        view = try! SwiftMessages.viewFromNib()
-        view.configureContent(title: title, body: subTitle)
-        view.button?.isHidden = true
-            view.configureDropShadow()
-            let iconStyle: IconStyle = .default
-            switch theme {
-            case "info":
-                view.configureTheme(.info, iconStyle: iconStyle)
-                view.accessibilityPrefix = "info"
-            case PopupSuccess:
-                view.configureTheme(.success, iconStyle: iconStyle)
-                view.accessibilityPrefix = PopupSuccess
-            case PopupWarning:
-                view.configureTheme(.warning, iconStyle: iconStyle)
-                view.accessibilityPrefix = PopupWarning
-            case PopupError:
-                view.configureTheme(.error, iconStyle: iconStyle)
-                view.accessibilityPrefix = PopupError
-            default:
-                let iconText = ["🐸", "🐷", "🐬", "🐠", "🐍", "🐹", "🐼"].randomElement()
-                view.configureTheme(backgroundColor: UIColor.purple, foregroundColor: UIColor.white, iconImage: nil, iconText: iconText)
-                view.button?.setImage(Icon.errorSubtle.image, for: .normal)
-                view.button?.setTitle(nil, for: .normal)
-                view.button?.backgroundColor = UIColor.clear
-                view.button?.tintColor = UIColor.green.withAlphaComponent(0.7)
-            }
-            SwiftMessages.show(view: view)
-        }
-}
+//extension UIViewController{
+//    func popUpshow(title: String, subTitle: String, theme: String) {
+//        let view: MessageView
+//        view = try! SwiftMessages.viewFromNib()
+//        view.configureContent(title: title, body: subTitle)
+//        view.button?.isHidden = true
+//            view.configureDropShadow()
+//            let iconStyle: IconStyle = .default
+//            switch theme {
+//            case "info":
+//                view.configureTheme(.info, iconStyle: iconStyle)
+//                view.accessibilityPrefix = "info"
+//            case PopupSuccess:
+//                view.configureTheme(.success, iconStyle: iconStyle)
+//                view.accessibilityPrefix = PopupSuccess
+//            case PopupWarning:
+//                view.configureTheme(.warning, iconStyle: iconStyle)
+//                view.accessibilityPrefix = PopupWarning
+//            case PopupError:
+//                view.configureTheme(.error, iconStyle: iconStyle)
+//                view.accessibilityPrefix = PopupError
+//            default:
+//                let iconText = ["🐸", "🐷", "🐬", "🐠", "🐍", "🐹", "🐼"].randomElement()
+//                view.configureTheme(backgroundColor: UIColor.purple, foregroundColor: UIColor.white, iconImage: nil, iconText: iconText)
+//                view.button?.setImage(Icon.errorSubtle.image, for: .normal)
+//                view.button?.setTitle(nil, for: .normal)
+//                view.button?.backgroundColor = UIColor.clear
+//                view.button?.tintColor = UIColor.green.withAlphaComponent(0.7)
+//            }
+//            SwiftMessages.show(view: view)
+//        }
+//}

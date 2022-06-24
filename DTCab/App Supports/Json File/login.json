@@ -1,0 +1,9 @@
+{"status":"ok",
+"message":"success",
+"response":{"firstName":"sachin",
+    "lastName":"sr",
+    "email":"sachin_sr@gmail.com",
+    "dob":"21-01-1975",
+    "imageUrl":"",
+    "mobile":"9710488268",
+    "type":"2"}}

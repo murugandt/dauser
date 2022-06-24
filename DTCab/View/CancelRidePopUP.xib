@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CancelRidePopUP"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="460" height="423"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4l-vL-NJY">
+                    <rect key="frame" x="0.0" y="44" width="460" height="345"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warningImage" translatesAutoresizingMaskIntoConstraints="NO" id="3vK-VV-UjV">
+                            <rect key="frame" x="190" y="20" width="80" height="80"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="Pbl-il-aUE"/>
+                                <constraint firstAttribute="width" constant="80" id="pWR-1C-1py"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancel This Ride?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIw-UL-PuN">
+                            <rect key="frame" x="20" y="120" width="420" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Ma9-93-6b4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQm-Mc-1EV">
+                            <rect key="frame" x="20" y="170" width="420" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="a3c-WE-voc"/>
+                            </constraints>
+                            <string key="text">Passengers that cancel less get faster
+bookings.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ltw-tT-HmQ">
+                            <rect key="frame" x="20" y="240" width="420" height="40"/>
+                            <color key="backgroundColor" red="0.9203141332" green="0.30370190740000003" blue="0.23915144799999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Ulc-E9-lgh"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="KEEP THE BOOKING">
+                                        <attributes>
+                                            <font key="NSFont" size="21" name="Helvetica"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </buttonConfiguration>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="um9-aN-cAN">
+                            <rect key="frame" x="20" y="300" width="420" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="EFP-cg-e6u"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="Cancel Ride">
+                                        <attributes>
+                                            <font key="NSFont" size="22" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="vQm-Mc-1EV" firstAttribute="top" secondItem="zIw-UL-PuN" secondAttribute="bottom" constant="10" id="2Zd-58-Yh3"/>
+                        <constraint firstItem="um9-aN-cAN" firstAttribute="leading" secondItem="Y4l-vL-NJY" secondAttribute="leading" constant="20" id="D5T-rw-yW9"/>
+                        <constraint firstItem="zIw-UL-PuN" firstAttribute="leading" secondItem="Y4l-vL-NJY" secondAttribute="leading" constant="20" id="DBk-jK-YzG"/>
+                        <constraint firstItem="3vK-VV-UjV" firstAttribute="centerX" secondItem="Y4l-vL-NJY" secondAttribute="centerX" id="Wks-as-uqA"/>
+                        <constraint firstItem="zIw-UL-PuN" firstAttribute="top" secondItem="3vK-VV-UjV" secondAttribute="bottom" constant="20" id="aab-Mj-Hqj"/>
+                        <constraint firstAttribute="trailing" secondItem="Ltw-tT-HmQ" secondAttribute="trailing" constant="20" id="gya-pM-dKu"/>
+                        <constraint firstItem="Ltw-tT-HmQ" firstAttribute="leading" secondItem="Y4l-vL-NJY" secondAttribute="leading" constant="20" id="h5K-jj-Dni"/>
+                        <constraint firstAttribute="trailing" secondItem="vQm-Mc-1EV" secondAttribute="trailing" constant="20" id="oW0-JG-atz"/>
+                        <constraint firstAttribute="trailing" secondItem="um9-aN-cAN" secondAttribute="trailing" constant="20" id="uBO-gj-SZW"/>
+                        <constraint firstAttribute="trailing" secondItem="zIw-UL-PuN" secondAttribute="trailing" constant="20" id="vkH-eO-4x5"/>
+                        <constraint firstItem="vQm-Mc-1EV" firstAttribute="leading" secondItem="Y4l-vL-NJY" secondAttribute="leading" constant="20" id="xPe-SG-DhR"/>
+                        <constraint firstItem="um9-aN-cAN" firstAttribute="top" secondItem="Ltw-tT-HmQ" secondAttribute="bottom" constant="20" id="xpS-MR-iNv"/>
+                        <constraint firstItem="Ltw-tT-HmQ" firstAttribute="top" secondItem="vQm-Mc-1EV" secondAttribute="bottom" constant="20" id="zMd-Ls-viN"/>
+                        <constraint firstItem="3vK-VV-UjV" firstAttribute="top" secondItem="Y4l-vL-NJY" secondAttribute="top" constant="20" id="zgi-86-J6P"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Y4l-vL-NJY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="R2R-6g-UeW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Y4l-vL-NJY" secondAttribute="bottom" id="TEa-9h-RzJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Y4l-vL-NJY" secondAttribute="trailing" id="aoc-fR-ni0"/>
+                <constraint firstItem="Y4l-vL-NJY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ttl-t3-82b"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="72" y="43"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="warningImage" width="240" height="240"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

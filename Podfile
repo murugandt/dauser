@@ -11,7 +11,10 @@ target 'DTCab' do
   pod 'GooglePlaces'
   pod 'Firebase/Core’
   pod 'Firebase/Messaging'
-  pod 'SwiftMessages'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
+  pod 'SideMenu' 
+ 
   pod 'Alamofire', '~> 4.4'
   # Pods for DTCab
 

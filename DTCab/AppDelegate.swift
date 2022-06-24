@@ -8,9 +8,11 @@
 import UIKit
 import CoreData
 import Firebase
+import FirebaseAnalytics
 import IQKeyboardManagerSwift
 import GooglePlaces
 import GoogleMaps
+import FirebaseCrashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUserNotificationCenterDelegate {
@@ -25,7 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
     
     func basicSetup(application: UIApplication){
         self.setRootVC(isHome: false)
-        //self.firbaseConfiguration()
+        self.firbaseConfiguration()
+        GMSServices.provideAPIKey("AIzaSyA0CiZZvu4LCQDBZ9PyP3nmH3DxlWd9m2c")
         //self.notificationConfiguration(application: application)
         self.keyboardConfiguration()
     }
@@ -71,7 +74,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
             let rootViewController:UIViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
             navigationController.viewControllers = [rootViewController]
         }else{
-            let rootViewController:UIViewController = storyboard.instantiateViewController(withIdentifier: "Home_OnboardingController") as! Home_OnboardingController
+            let rootViewController:UIViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController"
+            ) as! HomeViewController
+            
             navigationController.viewControllers = [rootViewController]
         }
         self.window?.rootViewController = navigationController

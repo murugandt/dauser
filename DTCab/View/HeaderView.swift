@@ -12,6 +12,7 @@ import UIKit
 @IBDesignable class HeaderView: UIView {
     
     var view: UIView!
+    @IBOutlet weak  var headerContentView : UIView!
     
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var titleLabel: UILabel!

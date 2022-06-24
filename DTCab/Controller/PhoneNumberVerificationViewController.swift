@@ -51,7 +51,7 @@ class PhoneNumberVerificationViewController: BaseViewController {
     }
     
     @IBAction func btnVerify(_ sender: Any) {
-        let vc = Storyboards.Main.instance.instantiateViewController(withIdentifier: "GetStartedViewController") as! GetStartedViewController
+        let vc = Storyboards.Main.instance.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

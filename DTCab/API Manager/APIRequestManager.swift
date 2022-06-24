@@ -42,6 +42,19 @@ class APIRequestManager {
             })
         }
     }
+    func getProfileList(completion: @escaping(_ jsonObject : LoginModel?) ->())
+    {
+        if let path  = Bundle.main.path(forResource: "login", ofType: "json"){
+            do{
+                let data = try Data(contentsOf : URL (fileURLWithPath: path), options: .mappedIfSafe)
+                completion(LoginModel.convertData(data: data))
+                print(data)
+            }catch{
+                
+            }
+        }
+        
+    }
     
     private func post(request: NSMutableURLRequest, completion: @escaping (_ success: Bool, _ object: AnyObject?) -> ()) {
         dataTask(request: request, method: "POST", completion: completion)

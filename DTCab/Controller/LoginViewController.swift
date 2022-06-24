@@ -26,15 +26,21 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     }
     
     func setupView(){
-        LoginVM.sharedInstance.loginValidation = {(msg)  in
+        LoginVM.sharedInstance.loginValidation = {(msg ,success)  in
             //self.popUpshow(title: appName, subTitle: msg, theme: PopupError)
+            if (success){
+                LoginVM.sharedInstance.loginRequestClick(userName: self.emailTextField.text!, password: self.passwordTextField.text!)
+                self.errorMsgBgView.isHidden = true
+                self.errorMsgBgViewHeight.constant = 03
+                print("success")
+                
+                
+            }
             self.lblError.text = msg
         }
         
-        LoginVM.sharedInstance.loginSuccess = {()  in
-            self.errorMsgBgView.isHidden = true
-            self.errorMsgBgViewHeight.constant = 0
-            print("success")
+        LoginVM.sharedInstance.loginSuccess = {(msg)  in
+           
         }
         
         headerView.titleLabel.text = "Log in"
@@ -77,7 +83,12 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         errorMsgBgView.isHidden = false
         self.errorMsgBgViewHeight.constant = 50
         self.view.layoutIfNeeded()
-        LoginVM.sharedInstance.loginRequestClick(userName: self.emailTextField?.text, password: self.passwordTextField?.text)
+        
+//        LoginVM.sharedInstance.loginRequestClick(userName: self.emailTextField?.text, password: self.passwordTextField?.text)
+//        LoginVM.sharedInstance.userValidate(username: self.emailTextField!, password: self.passwordTextField!)
+        let vc = Storyboards.Main.instance.instantiateViewController(withIdentifier: "PhoneNumberVerificationViewController")  as! PhoneNumberVerificationViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+       
     }
     
     @IBAction func loginWithFb(_ sender: Any) {

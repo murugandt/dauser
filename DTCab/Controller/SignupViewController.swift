@@ -51,8 +51,6 @@ class SignupViewController: BaseViewController, UITextFieldDelegate, CountrySele
         passwordTextField.setLeftPadding(value: 8)
     }
     
-    
-    
     func selectedCountryData(countryCode: String, viewController: UIViewController) {
         countryCodeBtn.setTitle(countryCode, for: .normal)
     }
@@ -100,8 +98,12 @@ class SignupViewController: BaseViewController, UITextFieldDelegate, CountrySele
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
         self.navigationController?.pushViewController(vc!, animated: true)
     }
-}
 
+@IBAction func signUpBtn(_ sender: Any) {
+    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
+    self.navigationController?.pushViewController(vc!, animated: true)
+}
+}
 extension UITapGestureRecognizer {
     func didTapAttributedTextInLabel(label: UILabel, targetText: String) -> Bool {
         guard let attributedString = label.attributedText, let lblText = label.text else { return false }
@@ -139,5 +141,4 @@ extension UITapGestureRecognizer {
 
         return NSLocationInRange(indexOfCharacter, targetRange)
     }
-
 }
